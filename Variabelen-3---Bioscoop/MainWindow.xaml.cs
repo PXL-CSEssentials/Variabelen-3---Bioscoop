@@ -28,24 +28,26 @@ namespace Variabelen_3___Bioscoop
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
             // Declaratie van variabelen.     
-            short aantalNormaal, aantalKorting, aantalStudenten;
-            float totaal;
-            const float prijsNormaal = 9.10f;
-            const float prijsKorting = 8.10f;
-            const float prijsStudent = 6.90f;
+            short amountNormal;
+            short amountReduction;
+            short amountStudents;
+            float total;
+            const float PriceNormal = 9.10f;
+            const float PriceReduction = 8.10f;
+            const float PriceStudent = 6.90f;
 
             // Gegevens opvragen.     
-            aantalNormaal = short.Parse(normalTextBox.Text);
-            aantalKorting = short.Parse(reductionTextBox.Text);
-            aantalStudenten = short.Parse(studentTextBox.Text);
+            amountNormal = short.Parse(normalTextBox.Text);
+            amountReduction = short.Parse(reductionTextBox.Text);
+            amountStudents = short.Parse(studentTextBox.Text);
 
             // Ticketprijs berekenen.     
-            totaal = (aantalNormaal * prijsNormaal) +
-                (aantalKorting * prijsKorting) +
-                (aantalStudenten * prijsStudent);
+            total = (amountNormal * PriceNormal) +
+                (amountReduction * PriceReduction) +
+                (amountStudents * PriceStudent);
 
             // Afdrukken.      
-            priceToPayTextBox.Text = totaal.ToString(); // Convert.ToString(totaal);
+            priceToPayTextBox.Text = total.ToString(); // Convert.ToString(totaal);
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
